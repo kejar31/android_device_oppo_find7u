@@ -38,11 +38,14 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 1073741824
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13747929088 # 13747945472 - 16384 for crypto footer
 #BOARD_USERDATAIMAGE_PARTITION_SIZE := 3221225472
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := find7a,X9007,X9006
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_find7
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/oppo/find7/rootdir/etc/fstab.qcom
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := find7,find7a,X9007,X9006
 
 # inherit from the proprietary version
 -include vendor/oppo/find7/BoardConfigVendor.mk
